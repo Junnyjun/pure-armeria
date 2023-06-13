@@ -19,6 +19,8 @@ dependencies {
 
     runtimeOnly 'ch.qos.logback:logback-classic:1.2.11'
     runtimeOnly 'org.slf4j:log4j-over-slf4j:1.7.36'
+    //Failed to load brotli4j
+    runtimeOnly 'org.brotli:dec:0.1.2'
 
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
@@ -28,5 +30,5 @@ test {
 }
 
 kotlin {
-    jvmToolchain(11)
+    jvmToolchain(17)
 }
