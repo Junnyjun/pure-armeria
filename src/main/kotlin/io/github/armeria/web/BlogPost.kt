@@ -19,7 +19,7 @@ class BlogService {
         .toList()
 
     @Get("/blogs/:id")
-    fun get(@Param id: Int): HttpResponse = blogPosts[id]
+    fun get(@Param("id") id: Int): HttpResponse = blogPosts[id]
         ?.let { HttpResponse.ofJson(it) }
         ?: throw IllegalArgumentException("No blog post found with id: $id")
 

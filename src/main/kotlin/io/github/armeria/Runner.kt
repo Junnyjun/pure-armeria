@@ -18,8 +18,10 @@ object Runner {
 object RunnerDoc {
     val docService: DocService = DocService.builder()
         .exampleRequests(BlogService::class.java, "create", "{\"title\":\"My first blog\", \"content\":\"Hello Armeria!\"}")
-
-
+        .exampleRequests(BlogService::class.java, "update", "{\"title\":\"My first blog\", \"content\":\"Hello Armeria!\"}")
+        .exampleRequests(BlogService::class.java, "get", "1")
+        .exampleRequests(BlogService::class.java, "delete", "1")
+        .exampleRequests(BlogService::class.java, "gets")
         .build()
 }
 
